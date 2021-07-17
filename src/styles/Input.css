@@ -1,0 +1,29 @@
+input {
+  padding: 1rem;
+  outline: none;
+  font-size: 18px;
+  width: calc(100% - 55px);
+  border: none;
+  border-radius: var(--radius);
+}
+input:placeholder {
+  color: var(--VeryDarkGray);
+}
+.info-container {
+  width: 100%;
+}
+.input-container {
+  border-radius: var(--radius);
+  margin: 0 auto;
+  width: 80%;
+  max-width: 700px;
+  background-color: var(--white);
+}
+.input-btn {
+  border: none;
+  height: 55px;
+  border-radius: 0 var(--radius) var(--radius) 0;
+  width: 55px;
+  background-color: black;
+  color: var(--white);
+}

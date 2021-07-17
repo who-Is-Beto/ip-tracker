@@ -1,0 +1,14 @@
+.data-container {
+  text-align: center;
+  display: grid;
+  padding: 0.5rem;
+  border-radius: var(--radius);
+  background: var(--white);
+  margin: 1rem auto;
+  position: relative;
+  z-index: 1;
+  max-width: 80%;
+}
+.data-info {
+  padding: 0.5rem;
+}
