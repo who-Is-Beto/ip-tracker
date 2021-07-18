@@ -3,10 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@babel/preset-react": "^7.14.5",
     "@react-google-maps/api": "^2.2.0",
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
     "@types/jest": "^26.0.15",
     "@types/node": "^12.0.0",
     "@types/react": "^17.0.0",
@@ -14,6 +12,7 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-icons": "^4.2.0",
+    "react-query": "^3.19.0",
     "react-scripts": "4.0.3",
     "typescript": "^4.1.2",
     "web-vitals": "^1.0.1"
@@ -21,7 +20,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "jest --no-cache",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -41,5 +40,21 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.6",
+    "@babel/preset-env": "^7.14.7",
+    "@babel/preset-typescript": "^7.14.5",
+    "@wojtekmaj/enzyme-adapter-react-17": "^0.6.3",
+    "babel-jest": "^26.6.0",
+    "enzyme": "^3.11.0"
+  },
+  "jest": {
+    "setupFilesAfterEnv": [
+      "<rootDir>/src/test/setUpTest.js"
+    ],
+    "moduleNameMapper": {
+      "\\.(css)$": "<rootDir>/src/mocks/styleMock.js"
+    }
   }
 }
