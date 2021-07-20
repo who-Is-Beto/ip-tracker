@@ -2,14 +2,8 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { StoreProvider } from "./store/StoreProvider";
 
-ReactDOM.render(
-  <StoreProvider>
-    <App />
-  </StoreProvider>,
-  document.getElementById("root")
-);
+ReactDOM.render(<App />, document.getElementById("root"));
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

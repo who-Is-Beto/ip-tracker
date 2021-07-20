@@ -1,12 +1,41 @@
 import React, { ChangeEvent, useContext, useState } from "react";
 import { FaLocationArrow } from "react-icons/fa";
-import StoreContext from "../store/StoreProvider";
+import { StoreContext } from "../store/Context";
 import "../styles/Input.css";
+import { EActions } from "../types/enums";
 
 const Input = () => {
   const [value, setValue] = useState("");
-  const [ip, setIp] = useState({});
-  const [store, dispatch] = useContext(StoreContext);
+  const [ip, setIp] = useState({
+    ip: "",
+    version: "",
+    city: "",
+    region: "",
+    region_code: "",
+    country: "",
+    country_name: "",
+    country_code: "",
+    country_code_iso3: "",
+    country_capital: "",
+    country_tld: "",
+    continent_code: "",
+    in_eu: false,
+    postal: "",
+    latitude: "",
+    longitude: "",
+    timezone: "",
+    utc_offset: "",
+    country_calling_code: "",
+    currency: "",
+    currency_name: "",
+    languages: "",
+    countryArea: NaN,
+    countryPopulation: NaN,
+    message: "",
+    asn: "",
+    org: "",
+  });
+  const { state, dispatch } = useContext(StoreContext);
 
   const handleChangeInputValue = (event: ChangeEvent<HTMLInputElement>) => {
     setValue(event.target.value);
@@ -16,7 +45,12 @@ const Input = () => {
     fetch(`https://ipapi.co/${value}/json/`)
       .then((response) => response.json())
       .then((data) => setIp(data))
-      .then(() => console.log(ip));
+      .then(() =>
+        dispatch({
+          type: EActions.GET_IP,
+          payload: ip,
+        })
+      );
   };
 
   return (
