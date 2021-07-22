@@ -1,5 +1,5 @@
 input {
-  padding: 1rem;
+  padding: 1rem 1rem 1rem 2rem;
   outline: none;
   font-size: 18px;
   width: calc(100% - 55px);
@@ -20,10 +20,15 @@ input:placeholder {
   background-color: var(--white);
 }
 .input-btn {
+  cursor: pointer;
   border: none;
   height: 55px;
   border-radius: 0 var(--radius) var(--radius) 0;
   width: 55px;
   background-color: black;
   color: var(--white);
+  transition-duration: 0.5s;
+}
+.input-btn:hover {
+  background-color: rgb(59, 59, 59);
 }

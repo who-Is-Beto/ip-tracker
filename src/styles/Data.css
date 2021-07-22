@@ -1,6 +1,9 @@
 .data-container {
   text-align: center;
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 0.5rem;
   border-radius: var(--radius);
   background: var(--white);
@@ -10,5 +13,29 @@
   max-width: 80%;
 }
 .data-info {
+  text-align: center;
   padding: 0.5rem;
+  width: 200px;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .data-container {
+    flex-direction: row;
+    height: 200px;
+    padding: 1rem;
+    justify-content: space-around;
+  }
+}
+@media (min-width: 1080px) {
+  .data-info > small,
+  h4 {
+    max-width: 200px;
+    transform: scale(1.3);
+  }
 }

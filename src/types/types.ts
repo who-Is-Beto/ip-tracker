@@ -2,32 +2,30 @@ import { EActions } from "./enums";
 
 export type IpType = {
   ip: string;
-  version: string;
-  city: string;
-  region: string;
-  region_code: string;
-  country: string;
-  country_name: string;
-  country_code: string;
-  country_code_iso3: string;
-  country_capital: string;
-  country_tld: string;
-  continent_code: string;
-  in_eu: boolean;
-  postal: string;
-  latitude: string;
-  longitude: string;
-  timezone: string;
-  utc_offset: string;
-  country_calling_code: string;
-  currency: string;
-  currency_name: string;
-  languages: string;
-  countryArea: number;
-  countryPopulation: number;
-  message: string;
-  asn: string;
-  org: string;
+  location: {
+    country: string;
+    region: string;
+    city: string;
+    lat: number;
+    lng: number;
+    postalCode: string;
+    timezone: number;
+    geonameId: number;
+  };
+  domains: string[];
+  as: {
+    asn: number;
+    name: string;
+    route: string;
+    domain: string;
+    type: string;
+  };
+  isp: string;
+  proxy: {
+    proxy: boolean;
+    vpn: boolean;
+    tor: boolean;
+  };
 };
 
 export type InitialStateType = {
@@ -53,32 +51,30 @@ export type ActionMap<M extends { [index: string]: any }> = {
 export type ipPayloadType = {
   [EActions.GET_IP]: {
     ip: string;
-    version: string;
-    city: string;
-    region: string;
-    region_code: string;
-    country: string;
-    country_name: string;
-    country_code: string;
-    country_code_iso3: string;
-    country_capital: string;
-    country_tld: string;
-    continent_code: string;
-    in_eu: boolean;
-    postal: string;
-    latitude: string;
-    longitude: string;
-    timezone: string;
-    utc_offset: string;
-    country_calling_code: string;
-    currency: string;
-    currency_name: string;
-    languages: string;
-    countryArea: number;
-    countryPopulation: number;
-    message: string;
-    asn: string;
-    org: string;
+    location: {
+      country: string;
+      region: string;
+      city: string;
+      lat: number;
+      lng: number;
+      postalCode: string;
+      timezone: number;
+      geonameId: number;
+    };
+    domains: [string, string, string, string, string];
+    as: {
+      asn: number;
+      name: string;
+      route: string;
+      domain: string;
+      type: string;
+    };
+    isp: string;
+    proxy: {
+      proxy: boolean;
+      vpn: boolean;
+      tor: boolean;
+    };
   };
 };
 
