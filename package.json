@@ -1,6 +1,6 @@
 {
-  "name": "ip-tracker",
-  "version": "0.1.0",
+  "name": "whoisbeto-ip-tracker",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@babel/preset-react": "^7.14.5",

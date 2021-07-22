@@ -10,7 +10,6 @@
 /test/**/snap
 
 # production
-/build
 
 # misc
 .DS_Store
