@@ -1,4 +1,4 @@
-# Frontend Mentor - Country List challenge 🌍
+# Frontend Mentor - IP Tracker 🌍
 
 ![Design preview for the IP address tracker coding challenge](./src/design/desktop-design.jpg)
 
