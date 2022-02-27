@@ -10624,11 +10624,6 @@ svgo@^1.0.0, svgo@^1.2.2:
     unquote "~1.1.1"
     util.promisify "~1.0.0"
 
-sweetalert2-react-content@^4.1.0:
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/sweetalert2-react-content/-/sweetalert2-react-content-4.1.0.tgz#754627f3191f4878121d772314559e162c896f22"
-  integrity sha512-aZo1XmKDLXKDiSAMiNtg7YrVFqZ6GizbZoIct+sf5LuIPuA1fkA1t7KnFE7596aJmZHrcKi+BXhwDZVo0NJiCQ==
-
 sweetalert2@^11.0.19:
   version "11.0.19"
   resolved "https://registry.yarnpkg.com/sweetalert2/-/sweetalert2-11.0.19.tgz#b1c50b87b4f3227dcd62b7396bca36f7bbce5041"
@@ -11123,9 +11118,9 @@ url-loader@4.1.1:
     schema-utils "^3.0.0"
 
 url-parse@^1.4.3, url-parse@^1.5.1:
-  version "1.5.1"
-  resolved "https://registry.yarnpkg.com/url-parse/-/url-parse-1.5.1.tgz#d5fa9890af8a5e1f274a2c98376510f6425f6e3b"
-  integrity sha512-HOfCOUJt7iSYzEx/UqgtwKRMC6EU91NFhsCHMv9oM03VJcVo2Qrp8T8kI9D7amFf1cu+/3CEhgb3rF9zL7k85Q==
+  version "1.5.10"
+  resolved "https://registry.yarnpkg.com/url-parse/-/url-parse-1.5.10.tgz#9d3c2f736c1d75dd3bd2be507dcc111f1e2ea9c1"
+  integrity sha512-WypcfiRhfeUP9vvF0j6rw0J3hrWrw6iZv3+22h6iRMJ/8z1Tj6XfLP4DsUix5MhMPnXpiHDoKyoZ/bdCkwBCiQ==
   dependencies:
     querystringify "^2.1.1"
     requires-port "^1.0.0"
